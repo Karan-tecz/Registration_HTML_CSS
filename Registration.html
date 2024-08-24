@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Document</title>
+<head>
+
+</head>
+<style>
+    .container{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(243, 139, 139);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://png.pngtree.com/background/20211215/original/pngtree-low-poly-style-business-yellow-background-picture-image_1459926.jpg);
+        background-size: cover;
+    }
+    .form{
+        height: 400px;
+        width: 300px;
+        background-color: pink;
+        border-radius: 40px;
+        padding: 80px;
+        background-image: url(https://wallpaperaccess.com/full/7118105.jpg);
+        background-size: cover;
+    
+        
+    }
+    input{
+        height: 20px;
+        width: 89%;
+        border: 2px solid pink;
+        margin-bottom: 20px;
+    }
+    button{
+        height: 50px;
+        width: 90%;
+        border: none;
+        background-color: rgb(255, 67, 20);
+        color: palegoldenrod;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="form">
+        <center><h2>Registration</h2><br>
+        <form action="">
+            <label for="">Username:</label><br>
+            <input type="text" id="name"><br><br>
+            <label for="">Email:</label><br>
+            <input type="email" id="email"><br><br>
+            <label for="">Password:</label><br>
+            <input type="password" id="pass"></center>
+
+        </form>
+        <center><button onclick="savedata()">Submit</button></center>
+    </div>
+    </div>
+</body>
+<script>
+    function savedata(){
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let pass=document.getElementById("pass").value;
+        if(name==""){
+            alert("Please enter name")
+        }
+        else if(email==""){
+            alert("Please enter email")
+        }
+        else if(pass==""){
+            alert("Please enter a password")
+        }
+        else{
+            alert("Success" + name + email + pass)
+        }
+    }
+</script>
+</html>
